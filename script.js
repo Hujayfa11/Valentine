@@ -8,13 +8,16 @@ const title = document.getElementById("letter-title");
 const catImg = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
+const music = document.getElementById("bgMusic");
 
 // Click Envelope
 
 envelope.addEventListener("click", () => {
+    music.volume = 0.4;   // optional softer volume
+    music.play();         // ⭐ THIS LINE STARTS MUSIC
+
     envelope.style.display = "none";
     letter.style.display = "flex";
-
     setTimeout( () => {
         document.querySelector(".letter-window").classList.add("open");
     },50);
